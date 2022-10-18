@@ -48,5 +48,5 @@ RUN poetry config virtualenvs.create false && \
     poetry install
 
 # Copy source code to the image
-COPY --chown=$USER_UID:$USER_GID . ./simulation
+COPY . ./simulation
 ENV PYTHONPATH=/opt/simulation/src:$PYTHONPATH
